@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -130,14 +131,19 @@ public class FullscreenGalleryActivity extends AppCompatActivity {
             View view = layoutInflater.inflate(R.layout.image_fullscreen_preview, container, false);
             final ProgressBar progressBar = view.findViewById(R.id.progressBar);
             SwipeBackLayout swipeBackLayout = view.findViewById(R.id.swipeBackLayout);
+            final LinearLayout textBg = view.findViewById(R.id.textBg);
+
             viewPager.getBackground().setAlpha(255);
+            lblCount.setAlpha(1);
+            textBg.setAlpha(1);
 
             swipeBackLayout.setOnSwipeBackListener(new SwipeBackLayout.SwipeBackListener() {
                 @Override
                 public void onViewPositionChanged(float fractionAnchor, float fractionScreen) {
-                    int scale = (int) -(255 * fractionAnchor);
-                    int alpha =  scale != 0 ? scale : 255;
+                    int alpha = (int) (255 - (255 * fractionAnchor));
                     viewPager.getBackground().setAlpha(alpha);
+                    lblCount.setAlpha(1 - fractionAnchor);
+                    textBg.setAlpha(1 - fractionAnchor);
                 }
 
             });
