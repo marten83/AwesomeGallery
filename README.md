@@ -1,4 +1,4 @@
 # AwesomeGallery
 ## Demo
  
-![](http://martenolsson.se/images/awesomegallery.gif)
+![](http://martenolsson.se/images/ag.gif)
