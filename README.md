@@ -10,5 +10,5 @@ Library built on <a href="https://www.androidhive.info/2016/04/android-glide-ima
 
 ## Dependencies
 
-<a href="https://github.com/chrisbanes/PhotoView">chrisbanes/PhotoView</a>
+<a href="https://github.com/chrisbanes/PhotoView">chrisbanes/PhotoView</a><br/>
 <a href="https://github.com/liuguangqiang/SwipeBack">liuguangqiang/SwipeBack</a>
