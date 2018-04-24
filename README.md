@@ -1,5 +1,5 @@
 # AwesomeGallery
-Standard ViewGroups which responds to nested scrolls to create drag-dismissable layouts. Original code taken from
+
 Library built on <a href="https://www.androidhive.info/2016/04/android-glide-image-library-building-image-gallery-app/">Android Glide Image Library</a> with zoom and swipe to dismiss.
 
 
