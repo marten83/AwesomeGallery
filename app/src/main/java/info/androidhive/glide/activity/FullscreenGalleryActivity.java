@@ -173,13 +173,13 @@ public class FullscreenGalleryActivity extends AppCompatActivity {
             TextView lblTitle = view.findViewById(R.id.title);
             TextView lblDate = view.findViewById(R.id.date);
 
-            if(image.getName() != "") {
+            if(!image.getName().equals("")) {
                 lblTitle.setText(image.getName());
             }else{
                 lblTitle.setVisibility(View.GONE);
             }
 
-            if(image.getTimestamp() != "") {
+            if(!image.getTimestamp().equals("")) {
                 lblDate.setText(image.getTimestamp());
             }else{
                 lblDate.setVisibility(View.GONE);

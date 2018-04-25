@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.util.Log;
+import android.view.*;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -21,6 +20,7 @@ import java.util.ArrayList;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.github.chrisbanes.photoview.OnPhotoTapListener;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.liuguangqiang.swipeback.SwipeBackLayout;
 
@@ -148,14 +148,12 @@ public class AwesomeFullscreenGalleryActivity extends AppCompatActivity {
 
             Image image = images.get(position);
 
-
             Glide.with(getApplicationContext())
                 .asBitmap()
                 .load(image.getLarge())
                 .apply(new RequestOptions()
                         .fitCenter()
                 )
-
                 .into(new BitmapImageViewTarget(imageViewPreview) {
                     public void onResourceReady(Bitmap bitmap, Transition transition) {
                         super.onResourceReady(bitmap, transition);
@@ -168,13 +166,13 @@ public class AwesomeFullscreenGalleryActivity extends AppCompatActivity {
             TextView lblTitle = view.findViewById(R.id.title);
             TextView lblDate = view.findViewById(R.id.date);
 
-            if(image.getName() != "") {
+            if(!image.getName().equals("")) {
                 lblTitle.setText(image.getName());
             }else{
                 lblTitle.setVisibility(View.GONE);
             }
 
-            if(image.getTimestamp() != "") {
+            if(!image.getTimestamp().equals("")) {
                 lblDate.setText(image.getTimestamp());
             }else{
                 lblDate.setVisibility(View.GONE);

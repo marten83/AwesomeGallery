@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                             try {
                                 JSONObject object = response.getJSONObject(i);
                                 Image image = new Image();
-                                image.setName(object.getString("name"));
+                                image.setName("");
 
                                 JSONObject url = object.getJSONObject("url");
                                 image.setSmall(url.getString("small"));
