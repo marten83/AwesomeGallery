@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.liuguangqiang.swipeback:library:1.0.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.2.aar/ce981208fe54bd765157fad6e8326723/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.0.2.aar/ce981208fe54bd765157fad6e8326723/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.liuguangqiang.swipeback/library/1.0.2/b8ad09e71674f45323f6cf7d457b21972b5d632/library-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
