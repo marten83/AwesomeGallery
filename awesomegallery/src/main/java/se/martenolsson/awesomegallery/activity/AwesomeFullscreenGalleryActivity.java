@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.bumptech.glide.request.transition.Transition;
@@ -151,9 +152,7 @@ public class AwesomeFullscreenGalleryActivity extends AppCompatActivity {
             Glide.with(getApplicationContext())
                 .asBitmap()
                 .load(image.getLarge())
-                .apply(new RequestOptions()
-                        .fitCenter()
-                )
+                .transform(new FitCenter())
                 .into(new BitmapImageViewTarget(imageViewPreview) {
                     public void onResourceReady(Bitmap bitmap, Transition transition) {
                         super.onResourceReady(bitmap, transition);
